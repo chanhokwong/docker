@@ -53,7 +53,21 @@ docker rm my_docker
 ## 創建鏡像
 * 需要注意要創建鏡像，那麼項目中便需要存在DockerFile
 
-排錯流程
+### 文件佈局
+整個檔案文件夾
+
+|-- 項目文件
+
+|-- DockerFile(執行程序)
+
+|-- requirements.txt(執行環境需要的包)
+
+### 創建鏡像my_docker
+```
+
+```
+
+### 排錯流程
 ```
 # 1. 查看requirements.txt的內容在docker中是否正常
 type requirements.txt
@@ -64,4 +78,9 @@ docker builder prune
 # 3. 構建鏡像 --no-cache用以無視緩存
 docker build --no-cache -t mnist-api .
 
+```
+
+### 刪除鏡像
+```
+docker rmi 
 ```
